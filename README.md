@@ -6,6 +6,8 @@ _I found myself developing a Python application that required to be run in a Doc
 
 > NB: this does require a Pycharm Professional version.
 
+This tutorial is also posted as a [blog on my personal website](https://marcelvanworkum.com/python/2024/10/31/python-debug-server-docker.html), if you're interested in more on similar topics.
+
 ## Setup
 
 1. Create a python file, e.g. [main.py](./main.py) with the following code:
