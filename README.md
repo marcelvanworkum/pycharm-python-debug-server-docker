@@ -109,3 +109,16 @@ Now we can add breakpoints to our code, and they will be hit as expected.
 That's it! You now have a Python Debug Server running in a Docker container, and you can debug your Python application using Pycharm.
 
 I hope this was helpful. If you have any questions or run into any issues, please let me know by creating an issue on this repository.
+
+
+
+## Addendum
+
+Thanks [@rarcher-cerdi](https://github.com/marcelvanworkum/pycharm-python-debug-server-docker/issues/1)
+> There is a bug introduced in PyCharm 2024.3 which results in a failure of the container to connect to the Debug Server in PyCharm.
+> The observed behaviour:
+> The container outputs "This message prints before we attach the debugger" and then just sits there doing nothing (it's actually suspended).
+> PyCharm outputs "This message prints before we attach the debugger" but never receives a connection.
+> The solution is [described on YouTrack](https://youtrack.jetbrains.com/issue/PY-77357/Python-Debug-Server-with-pydevd-pycharm-stopped-working-in-2024.3):
+> disable python.debug.use.single.port in Help | Find Action | Registry
+> Hopefully this will be fixed in the next release of PyCharm, then this issue can be resolved!
